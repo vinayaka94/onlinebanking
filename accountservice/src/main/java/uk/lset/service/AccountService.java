@@ -1,5 +1,7 @@
 package uk.lset.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +20,10 @@ public Account get(String id) {
 public Account save(Account account) {
 	return accountrepository.save(account);
 }
+
+public List<Account> getAccountByUserId(String userId){
+	return accountrepository.findByuserId(userId);
+}
+
 
 }

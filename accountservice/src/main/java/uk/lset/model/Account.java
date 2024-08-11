@@ -1,5 +1,8 @@
 package uk.lset.model;
 
+import java.time.LocalDate;
+
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UuidGenerator;
 
 import jakarta.persistence.Entity;
@@ -24,7 +27,13 @@ public class Account {
 	private double balance;
 	
 	private String currency;
-
+    
+	private String userId;
+	
+	@CreationTimestamp
+    private LocalDate creationOn;
+	
+	
 	public String getId() {
 		return id;
 	}
@@ -81,6 +90,22 @@ public class Account {
 
 	public void setCurrency(String currency) {
 		this.currency = currency;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public LocalDate getCreationOn() {
+		return creationOn;
+	}
+
+	public void setCreationOn(LocalDate creationOn) {
+		this.creationOn = creationOn;
 	}
 	
 	

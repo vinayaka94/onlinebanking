@@ -1,5 +1,7 @@
 package uk.lset.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +26,11 @@ public class AccountController {
 	@GetMapping("/ping")
 	public String ping() {
 		return "hello";
+	}
+	
+	@GetMapping("/account/getByUserId/{id}")
+	public List<Account> getAccounts(String id){
+		return accountservice.getAccountByUserId(id);
 	}
 
 	@PostMapping(path = "account/add" , produces = "application/json")
