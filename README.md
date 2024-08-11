@@ -14,4 +14,19 @@ Online Banking Using JavaSpringBoot
 }
 
 
-
+GetAccount By User Id
+Path : account/getByUserId/40dcf9ac-20d1-7026-8aa7-2e8d88579ec7
+Response
+[
+    {
+        "id": "587688d5-6d70-410f-b925-dc7fb192869e",
+        "annualincome": 100.0,
+        "monthlyexpenses": 50.0,
+        "accounttype": "Savings",
+        "accountHolderName": null,
+        "balance": 0.0,
+        "currency": null,
+        "userId": null,
+        "creationOn": null
+    }
+]
